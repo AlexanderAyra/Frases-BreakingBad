@@ -1,11 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
+import Frase from './components/Frase'
 
 const Contenedor = styled.div`
 	display: flex;
 	align-items: center;
 	padding-top: 5rem;
-	flex-direction: column-reverse;
+	flex-direction: column;
 `
 
 const Boton = styled.button`
@@ -24,15 +25,20 @@ const Boton = styled.button`
 	border: 2px solid black;
 `
 
-const consultandoAPI = async () => {
-	const api = await fetch('http://breaking-bad-quotes.herokuapp.com/v1/quotes')
-	const frase = await api.json()
-	console.log(frase[0])
-}
-
 function App() {
+	const [frasex, setFrase] = useState({})
+
+	const consultandoAPI = async () => {
+		const api = await fetch(
+			'http://breaking-bad-quotes.herokuapp.com/v1/quotes'
+		)
+		const frase = await api.json()
+		setFrase(frase[0])
+	}
+
 	return (
 		<Contenedor>
+			<Frase frasex={frasex} />
 			<Boton onClick={consultandoAPI}>Obtener Frase</Boton>
 		</Contenedor>
 	)
