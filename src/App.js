@@ -5,7 +5,7 @@ import Frase from './components/Frase'
 const Contenedor = styled.div`
 	display: flex;
 	align-items: center;
-	padding-top: 5rem;
+	padding-top: 4rem;
 	flex-direction: column;
 `
 
@@ -19,7 +19,7 @@ const Boton = styled.button`
 	background-size: 300px;
 	font-family: Arial, Helvetica, sans-serif;
 	color: #fff;
-	margin-top: 3rem;
+	margin-top: 2rem;
 	padding: 1rem 3rem;
 	font-size: 2rem;
 	border: 2px solid black;
