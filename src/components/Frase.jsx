@@ -2,13 +2,13 @@ import React from 'react'
 import styled from 'styled-components'
 
 const ContenedorFrase = styled.div`
-	padding: 2.5rem;
+	padding: 3rem;
 	border-radius: 0.5rem;
 	background-color: #fff;
 	max-width: 700px;
 
 	@media (min-width: 992px) {
-		margin-top: 18rem;
+		margin-top: 15rem;
 	}
 
 	h1 {
